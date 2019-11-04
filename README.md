@@ -10,14 +10,14 @@ Dev container.
 
 ## Usage
 
-**Get image**   
+**Get image**
 `docket pull nicekiwi/php`
 
-**Start container**  
+**Start container**
 `docker run -itd --rm -v $pwd:/opt/code -w /opt/code --network host --name php nicekiwi/php`
 
-**Enter container**  
+**Enter container**
 `docker exec -it php bash`
 
-**Profit**  
-`php echo 'Release the niffler!'`
+**Profit**
+`php -r 'echo "Release the niffler!\n";'`
