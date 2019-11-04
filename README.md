@@ -2,18 +2,16 @@
 Dev container.
 
 - PHP 7.2
-- XDebug
-- Composer
-- Prestissimo Paralell Downloader
-- Laravel Installer
+- XDebug 2.7.0
+- Composer (with Prestissimo and Laravel Installer)
 
 ## Usage
 
-**Get image**  
+**Get image**
 `docket pull nicekiwi/php`
 
-**Start container**  
-`docker run -itd --rm -v $pwd:/opt/code -w /opt/code --network host --name php nicekiwi/php`  
-  
-**Enter container**  
+**Start container**
+`docker run -itd --rm -v $pwd:/opt/code -w /opt/code --network host --name php nicekiwi/php`
+
+**Enter container**
 `docker exec -it php bash`
