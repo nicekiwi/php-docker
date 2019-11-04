@@ -1,4 +1,7 @@
 # PHP Docker Container
+
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/nicekiwi/php)
+
 Dev container.
 
 - PHP 7.2
@@ -7,11 +10,14 @@ Dev container.
 
 ## Usage
 
-**Get image**
+**Get image**   
 `docket pull nicekiwi/php`
 
-**Start container**
+**Start container**  
 `docker run -itd --rm -v $pwd:/opt/code -w /opt/code --network host --name php nicekiwi/php`
 
-**Enter container**
+**Enter container**  
 `docker exec -it php bash`
+
+**Profit**  
+`php echo 'Release the niffler!'`
