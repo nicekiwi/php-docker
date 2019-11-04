@@ -1,4 +1,4 @@
-# php-docker
+# PHP Docker Container
 Dev container.
 
 - PHP 7.2
@@ -6,3 +6,11 @@ Dev container.
 - Composer
 - Prestissimo Paralell Downloader
 - Laravel Installer
+
+## Usage
+
+**Start container**  
+`docker run -itd --rm -v $pwd:/opt/code -w /opt/code --network host --name php nicekiwi/php`  
+  
+**Enter container**
+`docker exec -it php bash`
