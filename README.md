@@ -9,6 +9,9 @@ Dev container.
 
 ## Usage
 
+**Get image**  
+`docket pull nicekiwi/php`
+
 **Start container**  
 `docker run -itd --rm -v $pwd:/opt/code -w /opt/code --network host --name php nicekiwi/php`  
   
