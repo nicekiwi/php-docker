@@ -12,8 +12,20 @@ RUN docker-php-ext-install -j$(nproc) bcmath mysqli zip sodium
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
+# Add new user with non-root powers
+RUN useradd --system --create-home --home-dir /home/noot --shell /bin/bash --uid 1000 --no-password noot
+
+# Switch to new user
+USER noot
+
+# Set work dir to new users home dir
+WORKDIR /home/noot
+
 # Install Composer paralell downloader
 RUN composer global require hirak/prestissimo --no-plugins --no-scripts
 
 # Install Laravel Installer
 RUN composer global require laravel/installer --no-plugins --no-scripts
+
+# Add Composer bin to PATH
+RUN echo 'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> ~/.bashrc
