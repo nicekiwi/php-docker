@@ -13,7 +13,7 @@ RUN docker-php-ext-install -j$(nproc) bcmath mysqli zip sodium
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
 # Add new user with non-root powers
-RUN useradd --system --create-home --home-dir /home/noot --shell /bin/bash --uid 1000 --no-password noot
+RUN useradd --system --create-home --home-dir /home/noot --shell /bin/bash --uid 1000 noot
 
 # Switch to new user
 USER noot
