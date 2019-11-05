@@ -14,7 +14,7 @@ Dev container.
 `docket pull nicekiwi/php`
 
 **Start container**
-`docker run -itd --rm -v $pwd:/opt/code -w /opt/code --network host --name php nicekiwi/php`
+`docker run -itd --rm -v $PWD:/opt/code -w /opt/code --network host --name php nicekiwi/php`
 
 **Enter container**
 `docker exec -it php bash`
